@@ -1,0 +1,43 @@
+# Backend
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+
+# HTTP Requests
+requests
+httpx
+
+# LLM & RAG
+ollama
+langchain
+langgraph
+langchain-community
+langchain-core
+langchain-ollama
+langchain-qdrant
+qdrant-client
+sentence-transformers
+
+# MCP
+mcp
+
+# Document Loading
+pypdf
+beautifulsoup4
+lxml
+unstructured
+
+# Data Processing
+pandas
+numpy
+
+# Evaluation
+ragas
+
+# Testing
+pytest
+pytest-asyncio
+
+# Logging
+loguru
