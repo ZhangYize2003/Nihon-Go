@@ -4,9 +4,14 @@ uvicorn[standard]
 pydantic
 python-dotenv
 
-# HTTP Requests
+# HTTP Requests and web scrapping
 requests
 httpx
+beautifulsoup4
+lxml
+pypdf
+unstructured
+
 
 # LLM & RAG
 ollama
@@ -21,12 +26,6 @@ sentence-transformers
 
 # MCP
 mcp
-
-# Document Loading
-pypdf
-beautifulsoup4
-lxml
-unstructured
 
 # Data Processing
 pandas

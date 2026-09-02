@@ -1,0 +1,46 @@
+{
+    "sources": [
+        {
+            "url": "https://www.japan-guide.com/e/e2164.html",
+            "source_type": "official",
+            "region": "Tokyo",
+            "category": "all",
+            "budget_relevant": false
+        },
+        {
+            "url": "https://www.japan-guide.com/e/e2158.html",
+            "source_type": "official",
+            "region": "Kyoto",
+            "category": "all",
+            "budget_relevant": false
+        },
+        {
+            "url": "https://www.japan-guide.com/e/e2157.html",
+            "source_type": "official",
+            "region": "Osaka",
+            "category": "all",
+            "budget_relevant": false
+        },
+        {
+            "url": "https://www.japan-guide.com/e/e2172.html",
+            "source_type": "official",
+            "region": "Mount Fuji",
+            "category": "all",
+            "budget_relevant": false
+        },
+        {
+            "url": "https://www.japan-guide.com/e/e2163.html",
+            "source_type": "official",
+            "region": "Sapporo",
+            "category": "all",
+            "budget_relevant": false
+        },
+        {
+            "url": "https://www.japan.travel/en/guide/japan-on-a-budget/",
+            "source_type": "official",
+            "region": "general",
+            "category": "budget",
+            "budget_relevant": true
+        }
+    ]
+}
