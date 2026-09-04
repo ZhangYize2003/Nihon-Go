@@ -22,9 +22,9 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9,ja;q=0.8",
 }
 
-# Creating SQLite database
+# SQLite database
 
-# Initialise the database with the required table structure
+# Initialisation of table
 def init_db(conn: sqlite3.Connection):
     conn.execute("""
         CREATE TABLE IF NOT EXISTS chunks (

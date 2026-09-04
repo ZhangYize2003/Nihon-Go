@@ -28,32 +28,10 @@ def generate_response(prompt: str):
         stream=True,
     )
 
-
-dummy_data = [
-    "My name is Tom",
-    "I have no teeth",
-    "I have no friends",
-    "I love playing clash royale",
-]
-
 def main():
-    # for i, text in enumerate(dummy_data):
-    #     response = requests.post(
-    #         url="http://localhost:11434/api/embed",
-    #         json={"model": "qwen3-embedding:4b", "input": text},
-    #     )
-    #     data = response.json()
-    #     embeddings = data["embeddings"][0]
-    #     client.upsert(
-    #         collection_name="demo",
-    #         wait=True,
-    #         points=[PointStruct(id=i, vector=embeddings, payload={"text": text})]
-    #     )
-    
     # Each query must come with a one-sentence instruction that describes the task
-    #task = "Retrieve relevant Japan travel information, transportation details, attractions, accommodations, food recommendations, " \
-    #"and itinerary guidance that answer the user's question"
-    task = "Retrieve the passage that contains the factual answer to the user's question."
+    task = "Retrieve relevant Japan travel information, transportation details, attractions, accommodations, food recommendations, " \
+        "and itinerary guidance that answer the user's question"
     prompt = input("Prompt: ")
     adjusted_embed_prompt = get_detailed_instruct(task, prompt)
 
@@ -101,6 +79,13 @@ def main():
             print(generated_text, end="", flush=True)
 
     print()
+
+    # Show user the sources to prevent hallucinations
+    print("\nSources:")
+    for point in results.points:
+        payload = point.payload
+        print(f"  [{point.score:.3f}] {payload.get('title', 'Untitled')} "
+              f"({payload.get('region', 'unknown region')}) — {payload.get('url', 'no url')}")
 
 if __name__ == "__main__":
     main()
